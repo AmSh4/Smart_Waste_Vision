@@ -1,0 +1,1 @@
+Synthetic demo data. Replace with real labeled images for production.
