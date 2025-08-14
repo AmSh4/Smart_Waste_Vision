@@ -12,24 +12,23 @@
 ## Project Structure
 ```
 SmartWasteVision/
-  data/sample_images/        # small synthetic dataset (generated)
-  src/
-    api/                     # FastAPI app to serve predictions
-    model/                   # training script and model helper
-    utils/                   # utility scripts
-    db/                      # sqlite database
-  dashboard/                 # Streamlit demo app
-  notebooks/                 # optional analysis notebooks
-  scripts/                   # dataset generation
-  README.md
-  requirements.txt
+|__ data/sample_images/        # small synthetic dataset (generated)
+|__ src/
+     |__ api/                     # FastAPI app to serve predictions
+     |__ model/                   # training script and model helper
+     |__ utils/                   # utility scripts
+     |__ db/                      # sqlite database
+|__ dashboard/                 # Streamlit demo app
+|__ notebooks/                 # optional analysis notebooks
+|__ scripts/                   # dataset generation
+|__ README.md
+|__ requirements.txt
 ```
 
 ## Quickstart (runs locally)
 1. Create virtual env and install requirements:
    ```bash
-   python -m venv venv && source venv/bin/activate   # or .\\venv\\Scripts\\activate on Windows
-   pip install -r requirements.txt
+   python -m venv venv && source venv/bin/activate   
    ```
 2. Generate dataset:
    ```bash
@@ -61,10 +60,8 @@ SmartWasteVision/
 - `dashboard/streamlit_app.py` — interactive demo
 - `src/db/init_db.py` — initializes SQLite DB for logging predictions
 
-## Notes for recruiters
+## Notes 
 - Replace the tiny CNN with a state-of-the-art detector (YOLOv8/Detectron2) and add transfer learning for production-grade accuracy.
 - Connect to cloud storage and use real bin camera streams, add MQTT for IoT integration.
 - MLOps ideas: model registry, CI for training, scheduled retraining on new labeled data.
 
-## License
-MIT
